@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 .opacity{
-    opacity: 0;
+    display: none;
 }
