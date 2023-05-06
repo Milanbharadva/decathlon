@@ -9,7 +9,9 @@
 .opacity {
     display: none;
 }
-
+.disp{
+    display: none;
+}
 .active-item {
     text-decoration: underline;
     color: #3d9acc;

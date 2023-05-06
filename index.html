@@ -173,7 +173,10 @@
           </div>
         </div>
         <hr class="mt-5 mb-2" />
-        <div class="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 text-[14px] gap-5 justify-center lg:grid-cols-5 content-center ml-5 all-sports">
+        <div
+          class="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 text-[14px] gap-5 justify-center lg:grid-cols-5 content-center ml-5 all-sports"
+          id="list1"
+        >
           <div class="flex flex-col">
             <p class="text-gray-600 font-semibold md:text-[17px]">
               Outdoor Sports
@@ -296,7 +299,10 @@
             </div>
           </div>
         </div>
-        <div class="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 text-[14px] gap-5 justify-center lg:grid-cols-5 content-center ml-5 men">
+        <div
+          class="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 text-[14px] gap-5 justify-center lg:grid-cols-5 content-center ml-5 men disp"
+          id="list2"
+        >
           <div class="flex flex-col">
             <p class="text-gray-600 font-semibold md:text-[17px]">
               Men's Footwear
@@ -364,7 +370,10 @@
             </div>
           </div>
         </div>
-        <div class="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 text-[14px] gap-5 justify-center lg:grid-cols-5 content-center ml-5 women">
+        <div
+          class="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 text-[14px] gap-5 justify-center lg:grid-cols-5 content-center ml-5 women disp"
+          id="list3"
+        >
           <div class="flex flex-col">
             <p class="text-gray-600 font-semibold md:text-[17px]">
               Women's Footwear
@@ -432,7 +441,10 @@
             </div>
           </div>
         </div>
-        <div class="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 text-[14px] gap-5 justify-center lg:grid-cols-5 content-center ml-5 kid">
+        <div
+          class="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 text-[14px] gap-5 justify-center lg:grid-cols-5 content-center ml-5 kid disp"
+          id="list4"
+        >
           <div class="flex flex-col">
             <p class="text-gray-600 font-semibold md:text-[17px]">Kids' Tops</p>
             <div class="flex flex-col gap-1.5">
@@ -527,7 +539,10 @@
             </div>
           </div>
         </div>
-        <div class="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 text-[14px] gap-5 justify-center lg:grid-cols-5 content-center ml-5 sports">
+        <div
+          class="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 text-[14px] gap-5 justify-center lg:grid-cols-5 content-center ml-5 sports disp"
+          id="list5"
+        >
           <div class="flex flex-col">
             <p class="text-gray-600 font-semibold md:text-[17px]">
               Bags & Backpacks
@@ -605,7 +620,10 @@
             </div>
           </div>
         </div>
-        <div class="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 text-[14px] gap-5 justify-center lg:grid-cols-5 content-center ml-5 gym">
+        <div
+          class="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 text-[14px] gap-5 justify-center lg:grid-cols-5 content-center ml-5 gym disp"
+          id="list6"
+        >
           <div class="flex flex-col">
             <p class="text-gray-600 font-semibold md:text-[17px]">
               Men Gym Activewear
@@ -688,7 +706,16 @@
       var item4 = document.getElementById("item4");
       var item5 = document.getElementById("item5");
       var item6 = document.getElementById("item6");
+
+      var list1 = document.getElementById("list1");
+      var list2 = document.getElementById("list2");
+      var list3 = document.getElementById("list3");
+      var list4 = document.getElementById("list4");
+      var list5 = document.getElementById("list5");
+      var list6 = document.getElementById("list6");
+
       function changeitem(id) {
+        var id_main = id.id;
         item1.classList.remove("active-item");
         item2.classList.remove("active-item");
         item3.classList.remove("active-item");
@@ -696,6 +723,54 @@
         item5.classList.remove("active-item");
         item6.classList.remove("active-item");
         id.classList.add("active-item");
+
+        if (id_main == "item1") {
+          list1.classList.remove("disp");
+          list2.classList.add("disp");
+          list3.classList.add("disp");
+          list4.classList.add("disp");
+          list5.classList.add("disp");
+          list6.classList.add("disp");
+        } else if (id_main == "item2") {
+          list2.classList.remove("disp");
+          list1.classList.add("disp");
+          list3.classList.add("disp");
+          list4.classList.add("disp");
+          list5.classList.add("disp");
+          list6.classList.add("disp");
+        }
+        if (id_main == "item3") {
+          list3.classList.remove("disp");
+          list2.classList.add("disp");
+          list1.classList.add("disp");
+          list4.classList.add("disp");
+          list5.classList.add("disp");
+          list6.classList.add("disp");
+        }
+        if (id_main == "item4") {
+          list4.classList.remove("disp");
+          list2.classList.add("disp");
+          list3.classList.add("disp");
+          list1.classList.add("disp");
+          list5.classList.add("disp");
+          list6.classList.add("disp");
+        }
+        if (id_main == "item5") {
+          list5.classList.remove("disp");
+          list2.classList.add("disp");
+          list3.classList.add("disp");
+          list4.classList.add("disp");
+          list1.classList.add("disp");
+          list6.classList.add("disp");
+        }
+        if (id_main == "item6") {
+          list6.classList.remove("disp");
+          list2.classList.add("disp");
+          list3.classList.add("disp");
+          list4.classList.add("disp");
+          list5.classList.add("disp");
+          list1.classList.add("disp");
+        }
       }
     </script>
   </body>
