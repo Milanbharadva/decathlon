@@ -127,16 +127,175 @@
     <section id="nav-detail" class="opacity">
       <div class="md:w-4/5 w-full">
         <div
-          class="flex justify-around items-center flex-col md:flex-row mt-2 mb-2"
+          class="flex justify-around items-center flex-col gap-2 text-[17px] md:flex-row mt-2 mb-2"
         >
-          <div class="text-lg cursor-pointer">All Sports</div>
-          <div class="text-lg cursor-pointer">Men</div>
-          <div class="text-lg cursor-pointer">Women</div>
-          <div class="text-lg cursor-pointer">Kids</div>
-          <div class="text-lg cursor-pointer">Sports Accessories</div>
-          <div class="text-lg cursor-pointer">Gym Activewear & Equipment</div>
+          <div
+            class="text-lg cursor-pointer active-item"
+            id="item1"
+            onclick="changeitem(item1)"
+          >
+            All Sports
+          </div>
+          <div
+            class="text-lg cursor-pointer"
+            id="item2"
+            onclick="changeitem(item2)"
+          >
+            Men
+          </div>
+          <div
+            class="text-lg cursor-pointer"
+            id="item3"
+            onclick="changeitem(item3)"
+          >
+            Women
+          </div>
+          <div
+            class="text-lg cursor-pointer"
+            id="item4"
+            onclick="changeitem(item4)"
+          >
+            Kids
+          </div>
+          <div
+            class="text-lg cursor-pointer"
+            id="item5"
+            onclick="changeitem(item5)"
+          >
+            Sports Accessories
+          </div>
+          <div
+            class="text-lg cursor-pointer"
+            id="item6"
+            onclick="changeitem(item6)"
+          >
+            Gym Activewear & Equipment
+          </div>
         </div>
-        <hr />
+        <hr class="mt-5 mb-3" />
+        <div class="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 text-[14px] gap-5 justify-center lg:grid-cols-5 content-center ml-10  men" >
+          <div class="flex flex-col">
+            <p class="text-gray-600 font-semibold md:text-[17px]">
+              Outdoor Sports
+            </p>
+            <div class="flex flex-col gap-1.5">
+              <a href="" class="text-gray-600">Hiking and Trecking</a>
+              <a href="" class="text-gray-600">Camping</a>
+              <a href="" class="text-gray-600">Wildlife Watching</a>
+              <a href="" class="text-gray-600">Skiing and Snowboarding</a>
+              <a href="" class="text-gray-600"
+                >Rock Climbing & Mountaineering</a
+              >
+              <a href="" class="text-gray-600">Fishing</a>
+              <a href="" class="text-gray-600">Horse Riding</a>
+              <a href="" class="text-gray-600">Kites</a>
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <p class="text-gray-600 font-semibold md:text-[17px]">
+              Water Sports
+            </p>
+            <div class="flex flex-col gap-1.5">
+              <a href="" class="text-gray-600">Swiming</a>
+              <a href="" class="text-gray-600">Surfing and Beach Supports</a>
+              <a href="" class="text-gray-600">Snorkelling and Diving</a>
+              <a href="" class="text-gray-600">Kayaking and Stand Up Paddle</a>
+              <a href="" class="text-gray-600">Sailing</a>
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <p class="text-gray-600 font-semibold md:text-[17px]">
+              Fitness Sports
+            </p>
+            <div class="flex flex-col gap-1.5">
+              <a href="" class="text-gray-600">Fitness Cardio</a
+              ><a href="" class="text-gray-600"
+                >Body Building and Cross Training</a
+              ><a href="" class="text-gray-600">Athleisure & Home Training</a
+              ><a href="">Gymnastics</a><a href="" class="text-gray-600">Yoga</a
+              ><a href="">Kids Sports</a
+              ><a href="" class="text-gray-600">Boxing and Martial Arts</a>
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <p class="text-gray-600 font-semibold md:text-[17px]">
+              Racket Sports
+            </p>
+            <div class="flex flex-col gap-1.5">
+              <a href="" class="text-gray-600">Badminton</a>
+              <a href="" class="text-gray-600">Tennis</a>
+              <a href="" class="text-gray-600">Table Tennis</a>
+              <a href="" class="text-gray-600">Squash</a>
+              <a href="" class="text-gray-600">Racket Stringing Service </a>
+              <a href="" class="text-gray-600">Padel</a>
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <p class="text-gray-600 font-semibold md:text-[17px]">
+              Team Sports
+            </p>
+            <div class="flex flex-col gap-1.5">
+              <a href="" class="text-gray-600">Football</a>
+              <a href="" class="text-gray-600">Cricket</a
+              ><a href="" class="text-gray-600">Basketball</a>
+              <a href="" class="text-gray-600">Volleyball</a
+              ><a href="" class="text-gray-600">Hockey</a>
+              <a href="" class="text-gray-600">Rugby</a>
+              <a href="" class="text-gray-600">Baseball</a>
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <p class="text-gray-600 font-semibold md:text-[17px]">
+              Running and Walking
+            </p>
+            <div class="flex flex-col gap-1.5">
+              <a href="" class="text-gray-600">Running</a>
+              <a href="" class="text-gray-600">Walking</a
+              ><a href="" class="text-gray-600">Triathlon</a>
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <p class="text-gray-600 font-semibold md:text-[17px]">
+              Target Sports
+            </p>
+            <div class="flex flex-col gap-1.5">
+              <a href="" class="text-gray-600">Carrom</a>
+              <a href="" class="text-gray-600">Golf</a
+              ><a href="" class="text-gray-600">Archery</a>
+              <a href="" class="text-gray-600">Darts</a
+              ><a href="" class="text-gray-600">Billiards</a>
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <p class="text-gray-600 font-semibold md:text-[17px]">Cycling</p>
+            <div class="flex flex-col gap-1.5">
+              <a href="" class="text-gray-600">Cycling</a>
+              <a href="" class="text-gray-600">Cycle Servicing</a>
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <p class="text-gray-600 font-semibold md:text-[17px]">
+              Roller Sports
+            </p>
+            <div class="flex flex-col gap-1.5">
+              <a href="" class="text-gray-600">Skating</a>
+              <a href="" class="text-gray-600">Skateboarding</a>
+              <a href="" class="text-gray-600">Scooter</a>
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <p class="text-gray-600 font-semibold md:text-[17px]">
+              Nutrition and Supplements
+            </p>
+            <div class="flex flex-col gap-1.5">
+              <a href="" class="text-gray-600"
+                >Cereal Bars & Protein Supplements</a
+              >
+              <a href="" class="text-gray-600">Skateboarding</a>
+              <a href="" class="text-gray-600">Scooter</a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -145,6 +304,21 @@
         let det = document.getElementById("nav-detail");
         det.classList.toggle("opacity");
         console.log(det);
+      }
+      var item1 = document.getElementById("item1");
+      var item2 = document.getElementById("item2");
+      var item3 = document.getElementById("item3");
+      var item4 = document.getElementById("item4");
+      var item5 = document.getElementById("item5");
+      var item6 = document.getElementById("item6");
+      function changeitem(id) {
+        item1.classList.remove("active-item");
+        item2.classList.remove("active-item");
+        item3.classList.remove("active-item");
+        item4.classList.remove("active-item");
+        item5.classList.remove("active-item");
+        item6.classList.remove("active-item");
+        id.classList.add("active-item");
       }
     </script>
   </body>

@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+    scroll-behavior: smooth;
+}
 .opacity{
     display: none;
+}
+.active-item{
+    text-decoration: underline;
+    color: blue ;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 6px;
+    user-select: none;
 }
