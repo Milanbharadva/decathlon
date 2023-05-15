@@ -14,7 +14,7 @@
   </head>
   <body>
     <header
-      class="lg:sticky top-0 bg-[#007dbc] flex w-full h-fit items-center lg:justify-around sm:justify-between flex-col gap-2 space-y-4 sm:flex-row px-4 py-3 2xl:px-16 xl:py-4"
+      class="sticky z-50 top-0 bg-[#007dbc] flex w-full h-fit items-center lg:justify-around sm:justify-between flex-col gap-2 space-y-4 sm:flex-row px-4 py-3 2xl:px-16 xl:py-4"
     >
       <div class="">
         <div class="flex items-center cursor-pointer gap-5">
@@ -124,11 +124,11 @@
       </div>
     </header>
 
-    <section id="nav-detail" class="opacity">
+    <section id="nav-detail" class="opacity z-50">
       <!-- <div class="md:w-4/5 w-full"> -->
-      <div>
+      <div class="bg-gray-200 z-1">
         <div
-          class="flex justify-around items-center flex-col gap-2 text-[17px] md:flex-row mt-2 mb-2"
+          class="flex justify-around items-center flex-col gap-2 text-[17px] md:flex-row mb-2"
         >
           <div
             class="text-lg cursor-pointer active-item"
@@ -696,8 +696,221 @@
       </div>
     </section>
 
-    <section></section>
+    <section class="mt-5">
+      <div>
+        <div
+          class="flex md:flex-row flex-col items-center justify-center md:space-x-10"
+        >
+          <a href="">MEN</a>
+          <a href="">WOMEN</a>
+          <a href="">KIDS</a>
+          <a href="">SPORTS EQUIPMENT</a>
+          <a href="">ONLINE EXCLUSIVE</a>
+          <a href="">SALE</a>
+        </div>
+      </div>
+    </section>
 
+    <section class="mt-5 z-10">
+      <div class="relative w-full glide-01">
+        <!-- Slides -->
+        <div class="overflow-hidden cursor-pointer" data-glide-el="track">
+          <ul
+            class="relative w-full overflow-hidden p-0 whitespace-no-wrap flex flex-no-wrap [backface-visibility: hidden] [transform-style: preserve-3d] [touch-action: pan-Y] [will-change: transform]"
+          >
+            <li>
+              <img
+                src="./images/scroller/all play kinda summer web.jpg"
+                class="w-full max-w-full max-h-full m-auto"
+              />
+            </li>
+            <li>
+              <img
+                src="./images/scroller/camping web.jpg"
+                class="w-full max-w-full max-h-full m-auto"
+              />
+            </li>
+            <li>
+              <img
+                src="./images/scroller/jogflow web.jpg"
+                class="w-full max-w-full max-h-full m-auto"
+              />
+            </li>
+            <li>
+              <img
+                src="./images/scroller/kids phy edu web.avif"
+                class="w-full max-w-full max-h-full m-auto"
+              />
+            </li>
+            <li>
+              <img
+                src="./images/scroller/summer camp web.avif"
+                class="w-full max-w-full max-h-full m-auto"
+              />
+            </li>
+            <li>
+              <img
+                src="./images/scroller/team sports web.jpg"
+                class="w-full max-w-full max-h-full m-auto"
+              />
+            </li>
+          </ul>
+        </div>
+        <!-- Controls -->
+        <div
+          class="absolute left-0 flex items-center justify-between w-full h-0 px-4 top-1/2"
+          data-glide-el="controls"
+        >
+          <button
+            class="inline-flex items-center justify-center w-8 h-8 transition duration-300 border rounded-full lg:w-12 lg:h-12 text-slate-700 border-slate-700 hover:text-slate-900 hover:border-slate-900 focus-visible:outline-none bg-white/20"
+            data-glide-dir="<"
+            aria-label="prev slide"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-5 h-5"
+            >
+              <title>prev slide</title>
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18"
+              />
+            </svg>
+          </button>
+          <button
+            class="inline-flex items-center justify-center w-8 h-8 transition duration-300 border rounded-full lg:w-12 lg:h-12 text-slate-700 border-slate-700 hover:text-slate-900 hover:border-slate-900 focus-visible:outline-none bg-white/20"
+            data-glide-dir=">"
+            aria-label="next slide"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-5 h-5"
+            >
+              <title>next slide</title>
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/glide.js"></script>
+
+      <script>
+        var glide01 = new Glide(".glide-01", {
+          type: "slider",
+          focusAt: "center",
+          perView: 1,
+          autoplay: 3000,
+          animationDuration: 700,
+          gap: 0,
+          classes: {
+            activeNav: "[&>*]:bg-slate-700",
+          },
+        });
+
+        glide01.mount();
+      </script>
+    </section>
+
+    <section class="mt-8">
+      <div
+        style="
+          background-image: url('data:image/png;base64,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');
+        "
+      >
+        <div
+          class="flex flex-col justify-items-center md:flex-row justify-center items-center md:space-x-40 h-16"
+        >
+          <div class="flex gap-3 items-center justify-center cursor-pointer">
+            <img src="/images/secure.avif" class="w-5 h-5" alt="" />
+            <span>100% Secure Payments</span>
+            <img src="./images/arrow.svg" alt="" />
+          </div>
+          <div class="flex justify-center items-center gap-3 cursor-pointer">
+            <img src="/images/return.avif" class="w-5 h-5" alt="" />
+            <span>Easy Returns</span>
+            <img src="./images/arrow.svg" alt="" />
+          </div>
+          <div class="flex justify-center items-center gap-3 cursor-pointer">
+            <img src="/images/spport.avif" class="w-5 h-5" alt="" />
+            <span>60+ Sports Under One Roof</span>
+            <img src="./images/arrow.svg" class="bg-white" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <div class="">
+        <!-- <div class="flex flex-col lg:flex-row space-y-8 justify-evenly items-center shrink"> -->
+        <div class="grid space-y-4 place-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 ">
+          <div class="flex flex-col">
+            <img
+              deca-image="true"
+              alt="Rain Jackets"
+              src="https://contents.mediadecathlon.com/p1769800/k$70224883db02c04dad7b89184e73ceba/440x483/5110pt2898/5264xcr5785/MOUNTAIN%20HIKING%20ADULT.jpg?format=auto&amp;quality=70&amp;f=440x0" width="360px"
+              class="h-96"
+            />
+            <div class="flex h-10 max-w-[360px]">
+              <h1 class="bg-yellow-400 text-gray-10 font-bold w-1/2 flex justify-center items-center">₹2499</h1>
+              <h1 class="bg-blue-400 text-white text-[14] w-1/2  flex justify-center items-center">Explore More</h1>
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <img
+              deca-image="true"
+              alt="Rain Jackets"
+              src="https://contents.mediadecathlon.com/p1769800/k$70224883db02c04dad7b89184e73ceba/440x483/5110pt2898/5264xcr5785/MOUNTAIN%20HIKING%20ADULT.jpg?format=auto&amp;quality=70&amp;f=440x0" width="360px"
+              class="h-96"
+            />
+            <div class="flex h-10 max-w-[360px]">
+              <h1 class="bg-yellow-400 text-gray-10 font-bold w-1/2 flex justify-center items-center">₹2499</h1>
+              <h1 class="bg-blue-400 text-white text-[14] w-1/2  flex justify-center items-center">Explore More</h1>
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <img
+              deca-image="true"
+              alt="Rain Jackets"
+              src="https://contents.mediadecathlon.com/p1769800/k$70224883db02c04dad7b89184e73ceba/440x483/5110pt2898/5264xcr5785/MOUNTAIN%20HIKING%20ADULT.jpg?format=auto&amp;quality=70&amp;f=440x0" width="360px"
+              class="h-96"
+            />
+            <div class="flex h-10 max-w-[360px]">
+              <h1 class="bg-yellow-400 text-gray-10 font-bold w-1/2 flex justify-center items-center">₹2499</h1>
+              <h1 class="bg-blue-400 text-white text-[14] w-1/2  flex justify-center items-center">Explore More</h1>
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <img
+              deca-image="true"
+              alt="Rain Jackets"
+              src="https://contents.mediadecathlon.com/p1769800/k$70224883db02c04dad7b89184e73ceba/440x483/5110pt2898/5264xcr5785/MOUNTAIN%20HIKING%20ADULT.jpg?format=auto&amp;quality=70&amp;f=440x0" width="360px"
+              class="h-96"
+            />
+            <div class="flex h-10 max-w-[360px]">
+              <h1 class="bg-yellow-400 text-gray-10 font-bold w-1/2 flex justify-center items-center">₹2499</h1>
+              <h1 class="bg-blue-400 text-white text-[14] w-1/2  flex justify-center items-center">Explore More</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    
     <script>
       function shownav() {
         let det = document.getElementById("nav-detail");
