@@ -19,3 +19,6 @@
     text-underline-offset: 6px;
     user-select: none;
 }
+.list{
+    display: none;
+}
